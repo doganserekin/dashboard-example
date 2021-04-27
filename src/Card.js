@@ -29,6 +29,7 @@ const onGridExit = onExit("grid");
 const onListExit = onExit("list");
 
 class Card extends PureComponent {
+
   shouldFlip = (prev, current) => {
     if (prev.type !== current.type) {
       return true;
