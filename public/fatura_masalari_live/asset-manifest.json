@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/fatura_masalari_live/index.html/static/css/main.6193b47e.chunk.css",
+    "main.js": "/fatura_masalari_live/index.html/static/js/main.39fecd2b.chunk.js",
+    "main.js.map": "/fatura_masalari_live/index.html/static/js/main.39fecd2b.chunk.js.map",
+    "runtime-main.js": "/fatura_masalari_live/index.html/static/js/runtime-main.04185a99.js",
+    "runtime-main.js.map": "/fatura_masalari_live/index.html/static/js/runtime-main.04185a99.js.map",
+    "static/css/2.8f976517.chunk.css": "/fatura_masalari_live/index.html/static/css/2.8f976517.chunk.css",
+    "static/js/2.ac7f0607.chunk.js": "/fatura_masalari_live/index.html/static/js/2.ac7f0607.chunk.js",
+    "static/js/2.ac7f0607.chunk.js.map": "/fatura_masalari_live/index.html/static/js/2.ac7f0607.chunk.js.map",
+    "index.html": "/fatura_masalari_live/index.html/index.html",
+    "static/css/2.8f976517.chunk.css.map": "/fatura_masalari_live/index.html/static/css/2.8f976517.chunk.css.map",
+    "static/css/main.6193b47e.chunk.css.map": "/fatura_masalari_live/index.html/static/css/main.6193b47e.chunk.css.map",
+    "static/js/2.ac7f0607.chunk.js.LICENSE.txt": "/fatura_masalari_live/index.html/static/js/2.ac7f0607.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04185a99.js",
+    "static/css/2.8f976517.chunk.css",
+    "static/js/2.ac7f0607.chunk.js",
+    "static/css/main.6193b47e.chunk.css",
+    "static/js/main.39fecd2b.chunk.js"
+  ]
+}
