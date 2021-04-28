@@ -44,7 +44,7 @@ class Card extends PureComponent {
     if(id <= 5){
       bgColor = 'orange';
     } else {{
-      bgColor = 'green';
+      bgColor = '#29B63E';
     }}
 
     return (

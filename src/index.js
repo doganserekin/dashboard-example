@@ -15,72 +15,63 @@ class ListExample extends Component {
     filteredIds: [],
     stagger: "forward",
     spring: "noWobble",
-    // masalar: [
-    //   { id: 23, title: "Fatura Masa 01", info: "Kalan malzeme: 23"},
-    //   { id: 12, title: "Fatura Masa 02", info: "Kalan malzeme: 12"},
-    //   { id: 15, title: "Fatura Masa 03", info: "Kalan malzeme: 15"},
-    //   { id: 5, title: "Fatura Masa 04", info: "Kalan malzeme: 5"},
-    //   { id: 6, title: "Fatura Masa 05", info: "Kalan malzeme: 6"},
-    // ],
   };
 
   constructor(props) {
     super(props);
     this.masalar = [
-      {
-        TPNUM: "210410803012",
-        USERNAME: "ELIF AYDEMIR",
-        INVOICE_STATION: "MEZ4Z020",
-        COUNT: 20.0,
-      },
-      {
-        TPNUM: "210410803031",
-        USERNAME: "MIZGIN GÖNENLI",
-        INVOICE_STATION: "MEZ4Z023",
-        COUNT: 20.0,
-      },
-      {
-        TPNUM: "210410802985",
-        USERNAME: "BIRGÜL AYDıN",
-        INVOICE_STATION: "MEZ4Z012",
-        COUNT: 18.0,
-      },
-      {
-        TPNUM: "210410802911",
-        USERNAME: "EL ZARA POLAT",
-        INVOICE_STATION: "MEZ4Z003",
-        COUNT: 6.0,
-      },
-      {
-        TPNUM: "210410803023",
-        USERNAME: "EBRU ALKAN",
-        INVOICE_STATION: "MEZ4Z015",
-        COUNT: 4.0,
-      },
-      {
-        TPNUM: "210410802879",
-        USERNAME: "SEVDDA SÖGÜT",
-        INVOICE_STATION: "MEZ4Z011",
-        COUNT: 3.0,
-      },
+      // {
+      //   TPNUM: "210410803012",
+      //   USERNAME: "ELIF AYDEMIR",
+      //   INVOICE_STATION: "MEZ4Z020",
+      //   COUNT: 20.0,
+      // },
+      // {
+      //   TPNUM: "210410803031",
+      //   USERNAME: "MIZGIN GÖNENLI",
+      //   INVOICE_STATION: "MEZ4Z023",
+      //   COUNT: 20.0,
+      // },
+      // {
+      //   TPNUM: "210410802985",
+      //   USERNAME: "BIRGÜL AYDıN",
+      //   INVOICE_STATION: "MEZ4Z012",
+      //   COUNT: 18.0,
+      // },
+      // {
+      //   TPNUM: "210410802911",
+      //   USERNAME: "EL ZARA POLAT",
+      //   INVOICE_STATION: "MEZ4Z003",
+      //   COUNT: 6.0,
+      // },
+      // {
+      //   TPNUM: "210410803023",
+      //   USERNAME: "EBRU ALKAN",
+      //   INVOICE_STATION: "MEZ4Z015",
+      //   COUNT: 4.0,
+      // },
+      // {
+      //   TPNUM: "210410802879",
+      //   USERNAME: "SEVDDA SÖGÜT",
+      //   INVOICE_STATION: "MEZ4Z011",
+      //   COUNT: 3.0,
+      // },
     ];
  }
 
   loop = () => {
-
-      axios.get(`http://sap-pas-01.bizimdomain.dmz:8000/sap(bD10ciZjPTIwMA==)/bc/bsp/sap/zwm_bsp_021/request.html`)
+      axios.get(`http://sap-pas-01.bizimsite.dmz:8000/sap(bD10ciZjPTIwMA==)/bc/bsp/sap/zwm_bsp_021/request.html`)
       .then(res => {
         const data = res.data;
         this.masalar = data;
+        // this.setState({filteredIds: []})
         this.addToFilteredIds();
       })
 
   }
 
   componentDidMount() {
-
     setInterval(() => this.loop(), 10000);
-
   }
 
   addToFilteredIds = id => {
@@ -133,65 +124,15 @@ class ListExample extends Component {
                           this.state.stagger
                         )}
                         type={this.state.type}
-                        key={COUNT}
-                        addToFilteredIds={this.addToFilteredIds}
+                        key={INVOICE_STATION}
+                        // addToFilteredIds={this.addToFilteredIds}
                       />
                     ))}
                 </ul>
               </Flipped>
             </div>
           </Flipped>
-
         </Flipper>
-        {/* <button onClick={() => {
-          this.masalar = [
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-          ];
-
-        // this.setState({sort: 'asc'})
-
-        this.addToFilteredIds();
-
-        }}>Change data in background +1</button>
-        <button onClick={() => {
-          this.masalar = [
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-          ];
-
-        // this.setState({sort: 'asc'})
-
-        this.addToFilteredIds();
-
-        }}>Change data in background +1</button>
-        <button onClick={() => {
-          this.masalar = [
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-            { COUNT: 999, USERNAME: "UNKNOWN", INVOICE_STATION: "UNKNOWN"},
-          ];
-
-        // this.setState({sort: 'asc'})
-
-        this.addToFilteredIds();
-
-        }}>Change data in background -2</button> */}
       </div>
     );
   }
