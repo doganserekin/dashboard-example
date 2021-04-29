@@ -37,7 +37,7 @@ class Card extends PureComponent {
     return false;
   };
   render() {
-    const { id, title, info, type, stagger, addToFilteredIds } = this.props;
+    const { id, title, info, type, stagger, message, addToFilteredIds } = this.props;
     const flipId = `item-${id}`;
     var bgColor = 'white';
 
@@ -74,8 +74,9 @@ class Card extends PureComponent {
                   <p>{info}</p>
                   </div>
 
-                  <div style={{flex: 1, bottom: 0, }}>
+                  <div style={{flex: 1}}>
                   <h2>{id}</h2>
+                  <text>{message}</text>
                   </div>
 
 

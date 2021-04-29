@@ -17,7 +17,7 @@ body {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-    grid-auto-rows: 16rem;
+    grid-auto-rows: 19rem;
     grid-gap: 1rem;
     padding: 0;
     margin: 0;
@@ -130,4 +130,29 @@ body {
   .fm-example input {
     position: relative;
     margin-right: 0.5rem;
+  }
+
+  .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .bounce {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: red;
+    position: relative;
+    animation: mymove 3s infinite;
+  }
+
+  @keyframes mymove {
+    0%   { width: 50px; height: 50px; background: #7622da;}
+    20%  { width: 10px; height: 10px; background: #47c6eb;}
+    40%  {  width: 10px; height: 10px; background: #ed5f1f;}
+    60%  { width: 50px; height: 50px; background: #f59f28;}
+    80%  { width: 10px; height: 10px; background: #6b1e5b;}
+    100% { width: 50px; height: 50px; background: #45b794;}
   }
