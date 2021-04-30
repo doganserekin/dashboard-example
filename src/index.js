@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import React, { Component, useRef } from "react";
+import React, { Component } from "react";
 import { Flipper, Flipped } from "react-flip-toolkit";
 import Card from "./Card";
 // import Data from "./data";
@@ -64,13 +64,16 @@ class ListExample extends Component {
  }
 
   loop = () => {
+
       var i = setInterval(() => {
 
         if(this.state.loader < 95){
           this.setState({loader: this.state.loader + 1})
         }
+
       }, 50);
-      axios.get(`http://sap-pas-01.hepsiburada.dmz:8000/sap(bD10ciZjPTIwMA==)/bc/bsp/sap/zwm_bsp_021/request.html?json_data={"LGNUM":"DM6"}`)
+
+      axios.get(`http://sap-pas-01.hepsiburada.dmz:8000/sap(bD10ciZjPTIwMA==)/bc/bsp/sap/zwm_bsp_021/request.html?json_data={"LGNUM":"DM4"}`)
       .then(res => {
         this.state.loading ? this.setState({loading: false}) : this.setState({loading: false})
         const data = res.data;
@@ -125,9 +128,9 @@ class ListExample extends Component {
               }}
               decisionData={this.state}
             >
-              <div className="fm-flex-container" style={{justifyContent: 'center'}}>
+              {/* <div className="fm-flex-container" style={{justifyContent: 'center'}}>
 
-              </div>
+              </div> */}
 
               <Flipped flipId="list">
                 <div className={this.state.type === "grid" ? "fm-grid" : "fm-list"} style={{backgroundColor: 'white'}}>

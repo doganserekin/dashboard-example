@@ -66,17 +66,21 @@ class Card extends PureComponent {
                 delayUntil={flipId}
               >
                 <div style={{flex: 1}}>
-                  <div style={{flex: 2, height: 100, }}>
+                  <div style={{flex: 2, height: 80}}>
                   <h3>{title}</h3>
                   </div>
 
-                  <div style={{flex: 1,}}>
+                  <div style={{flex: 1}}>
                   <p>{info}</p>
                   </div>
 
-                  <div style={{flex: 1}}>
+                  <div style={{flex: 1, marginTop: -20}}>
                   <h2>{id}</h2>
-                  <text>{message}</text>
+                  <p style={{fontSize: 18, marginTop: -40}}>Adet Ürün Kaldı</p>
+                  </div>
+
+                  <div>
+                  <text style={{fontSize: 18, fontWeight: "bold"}}>{message}</text>
                   </div>
 
 
